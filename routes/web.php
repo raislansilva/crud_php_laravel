@@ -21,5 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/cadastro',['as'=>'cadastro.curso','uses' => 'HomeController@create']);
 Route::post('/home/salvar',['as'=>'cadastro.save','uses' => 'HomeController@save']);
 Route::get('/home/update/{id}',['as'=>'cadastro.update','uses' => 'HomeController@update']);
-Route::post('/home/updateSave/{id}',['as'=>'cadastro.updateSave','uses' => 'HomeController@updateSave']);
+Route::put('/home/updateSave/{id}',['as'=>'cadastro.updateSave','uses' => 'HomeController@updateSave']);
+Route::get('/home/delete/{id}',['as'=>'cadastro.delete','uses' => 'HomeController@delete']);
 

@@ -50,7 +50,7 @@ class HomeController extends Controller
     }
 
     public function update($id){
-        $registro = Curso::find($id);
+        $registro = curso::find($id);
         return view('admin.update',compact('registro'));
 
     }
@@ -71,7 +71,7 @@ class HomeController extends Controller
     }
 
     public function delete($id){
-        Curso:find($id)->delete();
+        Curso::find($id)->delete();
         return redirect()->route('home');
     }
 
